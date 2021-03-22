@@ -1,0 +1,42 @@
+header#navbar {
+    ul {
+        margin-left: 750px;
+
+        li.nav-item {
+            padding-left: 30px;
+            font-size: 22px;
+        }
+    }
+}
+
+div#content {
+    max-width: max-content;
+    margin: 30px auto;
+
+    div.spinner {
+        position: absolute;
+        top: 49%;
+        left: 45%;
+    }
+}
+
+@media (max-width: 990px) {
+
+    header#navbar {
+        ul {
+            margin: 0;
+    
+            li.nav-item {
+                padding: 0;                
+            }
+        }
+    }
+
+    div#content {
+        div.spinner {
+            top: 65% !important;
+            left: 36% !important;    
+        }
+    }
+
+}
