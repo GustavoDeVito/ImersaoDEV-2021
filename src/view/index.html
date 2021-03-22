@@ -13,41 +13,77 @@
 <body>
 
     <header id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#home" onclick="contentHTML('home')">
-                <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" width="150" height="50"/>
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul id="navbarDropdow" class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#home" onclick="contentHTML('home')">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#lesson" onclick="contentHTML('home')">Lesson</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about" onclick="contentHTML('about')">About</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home">
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" width="150" height="50"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="navbarDropdow" class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#last">Lesson</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#last">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <div id="content">
-        <div></div>
+    <div id="home" class="effect-parallax" data-speed="15">  
+      <h1>Welcome<br /><span>DEV</span></h1>
     </div>
 
+    <div id="last" class="effect-parallax" data-speed="10">
+      
+      <div class="lesson"></div>
+
+      <div class="about">  
+        <div class="card">
+          <img class="card-img-top" src="https://avatars.githubusercontent.com/u/44655561?v=4" />
+          <div class="card-body">
+          <h5 class="card-title">Gustavo de Vito</h5>
+          <p class="card-text">Admirer of the technologies that improve our world.</p>
+          <a href="https://github.com/GustavoDeVito" class="btn btn-dark">
+              <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/" class="btn btn-primary">
+              <i class="fab fa-linkedin"></i>
+          </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <!-- Developerment Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <script>
+      $('nav a').click(function(e) {
+        e.preventDefault();
+  
+        var id = $(this).attr('href'),
+        targetOffset = $(id).offset().top;
+  
+        $('html, body').animate({
+          scrollTop: targetOffset
+        }, 500);
+      });
+    </script>
 
     <!-- Script JS -->
     <script src="static/js/scripts.js"></script>
