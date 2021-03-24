@@ -129,7 +129,7 @@ div#last div.about {
 }
 
 div#last div.about .card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   width: 17rem;
   float: right;
@@ -153,11 +153,19 @@ div#last div.about .card {
     margin-left: 110px;
   }
   div#last div.lesson div.allLesson {
-    margin-left: 0;
-    width: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 340px;
   }
   div#last div.lesson div.allLesson label {
     font-size: 12px;
+  }
+  div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right {
+    padding-top: 4px;
+  }
+  div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   div#last div.about {
     position: relative;
