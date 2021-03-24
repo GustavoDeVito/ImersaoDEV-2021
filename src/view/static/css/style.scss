@@ -1,3 +1,5 @@
+@import 'template/aula1';
+
 * {
     margin: 0;
     padding: 0;
@@ -57,8 +59,8 @@ div#home {
         text-align: center;
         font-weight: bolder;
         position: relative;
-        top: 240px;
-        left: -500px;
+        top: 245px;
+        left: -520px;
 
         span {
             color: #ffff00;
@@ -67,22 +69,73 @@ div#home {
 }
 
 div#last {
+    background-color: #ef653b;
+    box-shadow: 5px 5px 5px 5px #fff;
 
     div.lesson {
+        width: max-content;
+        height: max-content;
+        float: left;
 
+        h3 {
+            margin-left: 400px;
+            margin-top: 100px;
+            font-weight: bolder;
+            font-size: 44px;
+        }
+
+        div.allLesson {
+            margin-top: 100px;
+            margin-left: 210px;
+            width: 500px;
+
+            div {
+                background-color: rgba(255, 255, 255, 0.8); 
+                border-radius: 7px;
+                margin: 10px;                
+            }
+            
+            label {
+                padding: 5px 0 5px 15px;
+                font-size: 17px;
+                font-weight: 700;
+                color: #000;
+            }
+
+            .far.fa-arrow-alt-circle-right {                
+                color: #000;
+                float: right;
+                padding-right: 10px;
+                padding-top: 7px;
+                font-size: 20px;
+                transition: .7s;
+
+                &:hover {
+                    transform: scale(1.4);
+                }
+            }
+        }
     }
     
     div.about {
+        box-shadow: 5px 10px 5px 5px #fff;
+        width: 25rem;
+        height: 43.6rem;
+        float: right;        
+        background-color: #4b4fa1;
+
         .card {
+            background-color: #000;
             width: 17rem; 
             float: right;
             margin-right: 50px;
-            margin-top: 120px;
+            margin-top: 140px;
         }
     }
 
 }
 
+//Responsive    
 @media (max-width: 990px) {
 
     header#navbar {
@@ -97,8 +150,18 @@ div#last {
 
     div#home {
         h1 {
-            top: 0;
+            top: 30px;
             left: 0;
+        }
+    }
+        
+    div#last {
+
+        // div.lesson {}
+        
+        div.about {
+            position: relative;
+            top: 40rem;
         }
     }
 
