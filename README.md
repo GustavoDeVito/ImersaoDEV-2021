@@ -1,3 +1,6 @@
 # ImersaoDEV
 
-add focus apos click no menu
+
+screen home:
+    add focus apos click no menu
+    responsive 'lesson'
