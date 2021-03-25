@@ -12,10 +12,11 @@
 </head>
 <body>
 
+
     <header id="navbar">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand">
+          <a href="#home" class="navbar-brand">
             <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" width="200" height="50"/>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +25,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul id="navbarDropdow" class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#last">Lesson</a>
+                <a class="nav-link" href="#last">Challenge</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#last">About</a>
@@ -41,31 +42,30 @@
 
     <div id="last" class="effect-parallax" data-speed="10">
       
-      <div class="lesson">
+      <div class="challenge">
 
         <h3>
-          Lesson
+          Challenge
         </h3>
 
-        <div class="allLesson">
+        <div class="allChallenge">
           <div>
-            <label>Conversor de Moedas e Variáveis no JavaScript</label>
-            <a href="aula01.html"><i class="far fa-arrow-alt-circle-right"></i></a>
+            <label>Currency and Variable Converter in JavaScript</label>
+            <a href="#challenge" onclick="challenge(1)"><i class="far fa-arrow-alt-circle-right"></i></a>
           </div>
           <div>
-            <label>Calculadora e laços condicionais no JavaScript</label>
-            <a href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
+            <label>Calculator and conditional loops in JavaScript</label>
+            <a href="#challenge" onclick="challenge(2)"><i class="far fa-arrow-alt-circle-right"></i></a>
           </div>
           <div>
-            <label>Mentalista e números aleatórios</label>
-            <a href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
-          </div>          
+            <label>Mentalist and random numbers</label>
+            <a href="#challenge" onclick="challenge(3)"><i class="far fa-arrow-alt-circle-right"></i></a>
+          </div>
           <!-- <div>
             <label></label>
-            <a href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
+            <a href="challenge.html" onclick="screenChallenge()"><i class="far fa-arrow-alt-circle-right"></i></a>
           </div> -->
         </div>
-
       </div>
 
       <div class="about">  
@@ -87,20 +87,20 @@
     </div>
 
     <!-- Developerment Vue.js -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $('nav a').click(function(e) {
         e.preventDefault();
-  
+
         var id = $(this).attr('href'),
         targetOffset = $(id).offset().top;
-  
+
         $('html, body').animate({
           scrollTop: targetOffset
         }, 500);
@@ -108,6 +108,8 @@
     </script>
 
     <!-- Script JS -->
-    <script src="static/js/app.js"></script>
+    <script src="static/js/app.js" type="module"></script>
+    <script src="static/module/template.js"></script>    
+
 </body>
 </html>

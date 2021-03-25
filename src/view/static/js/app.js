@@ -1,11 +1,1 @@
-getDollar = () => {
-    let url = 'https://economia.awesomeapi.com.br/all/USD-BRL'
-    
-    var xhttp = new XMLHttpRequest()
-        xhttp.open("GET", url, false)
-        xhttp.send()
-    
-    return JSON.parse(xhttp.responseText).USD.bid
-}
-  
-console.log(getDollar());
+import * as challenge from '../module/challenge.js'

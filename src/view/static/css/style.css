@@ -12,7 +12,7 @@ html, body {
 }
 
 header#navbar ul {
-  margin-left: 850px;
+  margin-left: 800px;
 }
 
 header#navbar ul li.nav-item {
@@ -68,7 +68,7 @@ div#last {
           box-shadow: 5px 5px 5px 5px #fff;
 }
 
-div#last div.lesson {
+div#last div.challenge {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -78,33 +78,33 @@ div#last div.lesson {
   float: left;
 }
 
-div#last div.lesson h3 {
-  margin-left: 400px;
+div#last div.challenge h3 {
+  margin-left: 360px;
   margin-top: 100px;
   font-weight: bolder;
   font-size: 44px;
 }
 
-div#last div.lesson div.allLesson {
+div#last div.challenge div.allChallenge {
   margin-top: 100px;
   margin-left: 210px;
   width: 500px;
 }
 
-div#last div.lesson div.allLesson div {
+div#last div.challenge div.allChallenge div {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 7px;
   margin-top: 10px;
 }
 
-div#last div.lesson div.allLesson label {
+div#last div.challenge div.allChallenge label {
   padding: 5px 0 5px 15px;
   font-size: 17px;
   font-weight: 700;
   color: #000;
 }
 
-div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right {
+div#last div.challenge div.allChallenge .far.fa-arrow-alt-circle-right {
   color: #000;
   float: right;
   padding-right: 10px;
@@ -114,7 +114,7 @@ div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right {
   transition: .7s;
 }
 
-div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right:hover {
+div#last div.challenge div.allChallenge .far.fa-arrow-alt-circle-right:hover {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
@@ -149,21 +149,21 @@ div#last div.about .card {
     top: 30px;
     left: 0;
   }
-  div#last div.lesson h3 {
-    margin-left: 110px;
+  div#last div.challenge h3 {
+    margin-left: 80px;
   }
-  div#last div.lesson div.allLesson {
+  div#last div.challenge div.allChallenge {
     margin-left: 10px;
     margin-right: 10px;
     width: 340px;
   }
-  div#last div.lesson div.allLesson label {
+  div#last div.challenge div.allChallenge label {
     font-size: 12px;
   }
-  div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right {
+  div#last div.challenge div.allChallenge .far.fa-arrow-alt-circle-right {
     padding-top: 4px;
   }
-  div#last div.lesson div.allLesson .far.fa-arrow-alt-circle-right:hover {
+  div#last div.challenge div.allChallenge .far.fa-arrow-alt-circle-right:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
