@@ -1,1 +1,0 @@
-import * as challenge from '../module/challenge.js'

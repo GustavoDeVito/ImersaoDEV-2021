@@ -1,4 +1,12 @@
-@import 'template/challenge';
+@import 'template/challengeDollarToReal';
+
+//all base of challenges
+div#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 * {
     margin: 0;

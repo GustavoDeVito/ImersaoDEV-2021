@@ -13,6 +13,9 @@ baseChallenge = () => {
     $('#home').remove();
     $('#last').remove();
 
+    $(window).scrollTop(0);
+    $('body').css("overflow", "hidden")
+
     $('body').prepend('<div id="content"><div></div></div>')
     $('body').prepend(`
         <header id="navbar">
@@ -24,17 +27,29 @@ baseChallenge = () => {
             </div>
             </nav>
         </header>
-    `)    
+    `)
 }
 
 getScreenDollarToReal = () => {
     document.getElementById('content').children[0].id = 'challengeDollarToReal'
     new Vue({
         el: '#challengeDollarToReal',
-        template: '<h1>Challenge Dollar To Real</h1>',
+        data: {
+            valueDollar: 1,
+            nowDollarReal: parseFloat(dollarToReal().toFixed(2)),
+        },
+        template: `
+            <div id="challengeDollarToReal" class="container effect-parallax">                
+                <div>
+                    <h1>Dollar To Real</h1>
+                    <label>Enter with an amount dollar:</label>
+                    <input class="form-control" type="number" min="1" v-model.number="valueDollar" />
+                    <label>Value in Real:</label>
+                    <p class="form-control">R$ {{ (valueDollar * nowDollarReal).toFixed(2) }}</p>
+                </div>
+            </div>
+        `,
     })
 }
 
-getScreenExit = () => {
-    document.getElementById('content').children[0].innerHTML = ''
-}
+challenge(1)

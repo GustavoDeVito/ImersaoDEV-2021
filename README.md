@@ -1,3 +1,3 @@
 # ImersaoDEV
 
-Nota: Iniciar o desafio 1, 2 e 3 imediantamente.
+Nota: Iniciar o desafio 2 e 3 imediantamente. Colocar no fim da pagina um button de voltar(fixed)
