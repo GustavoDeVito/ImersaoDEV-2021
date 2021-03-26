@@ -1,19 +1,19 @@
 //Template Vue.js
 
-challenge = (number) => {
+challenge = (number) => {    
     baseChallenge()
     
     if(number == 1) { getScreenDollarToReal() }
     else if(number == 2) {  }
     else if(number == 3) {  }
-  }
+}
 
-baseChallenge = () => {
+baseChallenge = () => {    
     $('#navbar').remove();
     $('#home').remove();
     $('#last').remove();
-
-    $(window).scrollTop(0);
+    
+    window.scrollTo(0,0);
     $('body').css("overflow", "hidden")
 
     $('body').prepend('<div id="content"><div></div></div>')
@@ -51,5 +51,3 @@ getScreenDollarToReal = () => {
         `,
     })
 }
-
-challenge(1)
