@@ -11,21 +11,18 @@ dollarToReal = () => {
 calculator = () => {
     new Vue({
         el: '#challengeCalculator',
-        data() {
-            return {
-                previous: null,
-                current: '',
-                operator: null,
-                operatorClicked: false,
-            }
+        data: {            
+          previous: null,
+          current: '',
+          operator: null,
+          operatorClicked: false,
         },
         methods: {
             clear() {
                 this.current = '';
               },
               sign() {
-                this.current = this.current.charAt(0) === '-' ? 
-                  this.current.slice(1) : `-${this.current}`;
+                this.current = this.current.charAt(0) === '-' ? this.current.slice(1) : `-${this.current}`;
               },
               percent() {
                 this.current = `${parseFloat(this.current) / 100}`;
@@ -55,7 +52,7 @@ calculator = () => {
                 this.setPrevious();
               },
               minus() {
-                this.operator = (a, b) => a - b;
+                this.operator = (a, b) => (a - b) * -1;
                 this.setPrevious();
               },
               add() {

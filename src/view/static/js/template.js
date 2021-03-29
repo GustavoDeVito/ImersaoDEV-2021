@@ -11,8 +11,8 @@ challenge = (number) => {
     baseChallenge(number)
 
     if(number == 1) { getScreenDollarToReal() }
-    else if(number == 2) { getCalculator() }
-    else if(number == 3) {  }
+    else if(number == 2) { getScreenCalculator() }
+    else if(number == 3) { getScreenMentalist() }
 }
 
 baseChallenge = (number) => {
@@ -43,6 +43,7 @@ baseChallenge = (number) => {
 
 getScreenDollarToReal = () => {
     document.getElementById('content').children[0].id = 'challengeDollarToReal'
+
     new Vue({
         el: '#challengeDollarToReal',
         data: {
@@ -63,35 +64,78 @@ getScreenDollarToReal = () => {
     })
 }
 
-getCalculator = () => {
+getScreenCalculator = () => {
   document.getElementById('content').children[0].id = 'challengeCalculator'
 
   $('#challengeCalculator').prepend(`
     <div id="challengeCalculator" class="container effect-parallax">
-    <div class="calculator">
-      <div class="display">{{ current || '0' }}</div>
-      <div v-on:click="clear" class="btn">C</div>
-      <div v-on:click="sign" class="btn">+/-</div>
-      <div v-on:click="percent" class="btn">%</div>
-      <div v-on:click="divide" class="btn operator">÷</div>
-      <div v-on:click="append('7')" class="btn">7</div>
-      <div v-on:click="append('8')" class="btn">8</div>
-      <div v-on:click="append('9')" class="btn">9</div>
-      <div v-on:click="times" class="btn operator">x</div>
-      <div v-on:click="append('4')" class="btn">4</div>
-      <div v-on:click="append('5')" class="btn">5</div>
-      <div v-on:click="append('6')" class="btn">6</div>
-      <div v-on:click="minus" class="btn operator">-</div>
-      <div v-on:click="append('1')" class="btn">1</div>
-      <div v-on:click="append('2')" class="btn">2</div>
-      <div v-on:click="append('3')" class="btn">3</div>
-      <div v-on:click="add" class="btn operator">+</div>
-      <div v-on:click="append('0')" class="btn zero">0</div>
-      <div v-on:click="dot" class="btn">.</div>
-      <div v-on:click="equal" class="btn operator">=</div>
+      <div class="calculator">
+        <div class="display">{{ current || '0' }}</div>
+        <div v-on:click="clear" class="btn">C</div>
+        <div v-on:click="sign" class="btn">+/-</div>
+        <div v-on:click="percent" class="btn">%</div>
+        <div v-on:click="divide" class="btn operator">÷</div>
+        <div v-on:click="append('7')" class="btn">7</div>
+        <div v-on:click="append('8')" class="btn">8</div>
+        <div v-on:click="append('9')" class="btn">9</div>
+        <div v-on:click="times" class="btn operator">x</div>
+        <div v-on:click="append('4')" class="btn">4</div>
+        <div v-on:click="append('5')" class="btn">5</div>
+        <div v-on:click="append('6')" class="btn">6</div>
+        <div v-on:click="minus" class="btn operator">-</div>
+        <div v-on:click="append('1')" class="btn">1</div>
+        <div v-on:click="append('2')" class="btn">2</div>
+        <div v-on:click="append('3')" class="btn">3</div>
+        <div v-on:click="add" class="btn operator">+</div>
+        <div v-on:click="append('0')" class="btn zero">0</div>
+        <div v-on:click="dot" class="btn">.</div>
+        <div v-on:click="equal" class="btn operator">=</div>
       </div>
     </div>
   `)
 
   calculator()
+}
+
+getScreenMentalist = () => {
+  document.getElementById('content').children[0].id = 'challengeMentalist'
+
+  new Vue({
+    el: '#challengeMentalist',
+    data: {
+      valueCorrect: 0,
+      valueStart: 0,
+      valueFinal: 0,
+      valueKick: 0,
+      resultStatus: "Waiting...",
+      resultHits: 0,
+      resultErrors: 0,
+    },
+    template: `
+      <div id="challengeMentalist" class="container effect-parallax">                
+        <div class="game">
+          <h1>Mentalist</h1>
+          <div class="config">
+            <label>Enter with the interval</label>
+            <input class="form-control" type="number" min="0" max="100" v-model.number="valueStart" placeholder="Start"/>            
+            <input class="form-control" type="number" min="0" max="100" v-model.number="valueFinal" placeholder="Final" />
+            <button type="button" class="btn btn-outline-warning" v-on:click="config"><i class="fas fa-cog"></i></button>
+          </div>
+          <div class="status">
+            <label>Kick a value:</label>
+            <input class="form-control" type="number" v-model.number="valueKick" />
+            <button type="button" class="btn btn-outline-success" v-on:click="config"><i class="fas fa-check"></i></button>
+            <p id="resultStatus" class="form-control">{{ resultStatus }}</p>
+          </div>
+          <div class="score">
+            <label>Hits</label>
+            <label>Errors</label>
+            <br />
+            <p class="form-control">{{ resultHits }}</p>        
+            <p class="form-control">{{ resultErrors }}</p>
+          </div>
+        </div>
+      </div>
+    `,
+    })
 }
