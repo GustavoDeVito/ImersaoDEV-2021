@@ -24,7 +24,8 @@ baseChallenge = (number) => {
 
     $('body').css("overflow", "hidden")
 
-    $('body').prepend('<button type="button" id="buttonBack"><a href="index.html"><i class="fas fa-times"></i></a></button>')
+    // $('body').prepend('<button type="button" id="buttonBack"><a href="index.html"><i class="fas fa-times"></i></a></button>')
+    $('body').prepend('<a id="buttonBack" href="index.html"><i class="fas fa-times"></i></a>')
     $('body').prepend('<div id="content"><div></div></div>')
     $('body').prepend(`
         <header id="navbar">

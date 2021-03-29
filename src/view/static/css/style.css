@@ -146,35 +146,28 @@ div#challengeCalculator div.calculator .operator {
   border: 2px solid #dc3545;
   border-radius: 10px;
   font-size: 16px;
-  -webkit-transition: .5s;
-  transition: .5s;
   height: 55px;
   width: 55px;
-}
-
-#buttonBack a {
   text-decoration: none;
   color: #dc3545;
   font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 #buttonBack .fas.fa-times {
   font-size: 22px;
+  padding-left: 2px;
 }
 
 #buttonBack:hover {
   background-color: #dc3545;
-}
-
-#buttonBack:hover a {
   color: #fff;
 }
 
 @media (max-width: 990px) {
   #buttonBack {
     background-color: #dc3545;
-  }
-  #buttonBack a {
     color: #fff;
   }
 }
