@@ -1,0 +1,56 @@
+div#challengeCalculator {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #14213d;
+    background-size: cover;
+    background-position: top center;
+    z-index: -999;
+}
+
+  div.calculator {
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    width: 400px;
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+
+    .display {
+      grid-column: 1 / 5;
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+      padding-left: 5px;
+    }
+    
+    .zero {
+      grid-column: 1 / 3;
+    }
+    
+    .btn {
+      background-color: #F2F2F2;
+      border: 1px solid #999;
+      padding-top: 10px;
+    }
+    
+    .operator {
+      background-color: orange;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  div#challengeCalculator {
+    div.calculator {
+      width: 300px;
+    }    
+  }
+}

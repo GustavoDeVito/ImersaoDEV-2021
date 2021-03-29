@@ -1,4 +1,6 @@
 @import 'template/challengeDollarToReal';
+@import 'template/challengeCalculator';
+@import 'template/buttonBack';
 
 //all base of challenges
 div#content {
@@ -10,7 +12,7 @@ div#content {
 
 * {
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 html, body {

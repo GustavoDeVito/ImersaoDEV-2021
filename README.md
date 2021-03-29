@@ -1,6 +1,6 @@
 # ImersaoDEV
 
-## Tecnologias envolvidas:
+### Tecnologias envolvidas:
 
 - HTML
 - Bootstrap 5

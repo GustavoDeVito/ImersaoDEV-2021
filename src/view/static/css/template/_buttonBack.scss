@@ -1,0 +1,42 @@
+#buttonBack {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid #dc3545;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: .5s;
+    height: 55px;
+    width: 55px;
+
+    a {
+        text-decoration: none;
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .fas.fa-times {
+        font-size: 22px;
+    }
+
+    &:hover {
+        background-color: #dc3545;
+
+        a {
+            color: #fff;
+        }
+    }
+    
+}
+
+@media (max-width: 990px) {
+    #buttonBack {
+        background-color: #dc3545;
+        
+        a {
+            color: #fff;
+        }
+    }
+}
