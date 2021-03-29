@@ -1,4 +1,4 @@
-# ImersaoDEV
+# ImersaoDEV2021
 
 ### Tecnologias envolvidas:
 
@@ -11,3 +11,5 @@
 - Font Awesome
 - Jquery
 - JavaScript
+
+- [ImersãoDEV2021](https://imersaodev2021.netlify.app)
