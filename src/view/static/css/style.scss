@@ -80,7 +80,7 @@ div#last {
     background-color: #ef653b;
     box-shadow: 5px 5px 5px 5px #fff;
 
-    div.challenge {
+    div#challenge {
         width: max-content;
         height: max-content;
         float: left;
@@ -124,8 +124,8 @@ div#last {
             }
         }
     }
-    
-    div.about {
+
+    div#about {
         box-shadow: 5px 10px 5px 5px #fff;
         width: 25rem;
         height: 43.6rem;
@@ -164,10 +164,10 @@ div#last {
             left: 0;
         }
     }
-        
+
     div#last {
 
-        div.challenge {
+        div#challenge {
 
             h3 {
                 margin-left: 80px;
@@ -193,7 +193,7 @@ div#last {
 
         }
         
-        div.about {
+        div#about {
             position: relative;
             top: 15rem;
         }

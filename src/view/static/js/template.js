@@ -8,13 +8,14 @@ challenge = (number) => {
     else if(number == 3) {  }
 }
 
-baseChallenge = () => {    
+baseChallenge = () => {
     $('#navbar').remove();
     $('#home').remove();
     $('#last').remove();
-    
+
     window.scrollTo(0,0);
-    $('body').css("overflow", "hidden")
+
+    $('body').css("overflow", "auto")
 
     $('body').prepend('<div id="content"><div></div></div>')
     $('body').prepend(`
