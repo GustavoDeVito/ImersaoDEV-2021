@@ -32,7 +32,7 @@ baseChallenge = (number) => {
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                <img id="navbarImg"src="` + logoImersaoDEV[number - 1] + `" width="200" height="50"/>
+                <img id="navbarImg"src="` + logoImersaoDEV[number - 1] + `" width="200" height="50" />
                 </a>
             </div>
             </nav>

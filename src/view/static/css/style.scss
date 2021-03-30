@@ -27,7 +27,7 @@ html, body {
 header#navbar {
     ul {
         margin-left: 800px;
-        
+
         li.nav-item {
             padding-left: 30px;
             font-size: 22px;
@@ -148,7 +148,7 @@ div#last {
 
 }
 
-//Responsive    
+//Responsive
 @media (max-width: 990px) {
 
     header#navbar {
@@ -171,6 +171,7 @@ div#last {
     div#last {
 
         div#challenge {
+            height: 43.6rem;
 
             h3 {
                 margin-left: 80px;
@@ -195,10 +196,10 @@ div#last {
             }
 
         }
-        
+
         div#about {
             position: relative;
-            top: 15rem;
+            bottom: 90px;
         }
     }
 

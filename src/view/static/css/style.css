@@ -71,7 +71,7 @@ div#challengeDollarToReal div:focus-within p {
 @media (max-width: 990px) {
   div#challengeDollarToReal div {
     position: relative;
-    margin: 0;
+    margin: -50px 0 0 0;
     width: auto;
     height: 300px;
     margin-bottom: 400px;
@@ -467,6 +467,9 @@ div#last div#about .card {
     top: 30px;
     left: 0;
   }
+  div#last div#challenge {
+    height: 43.6rem;
+  }
   div#last div#challenge h3 {
     margin-left: 80px;
   }
@@ -487,7 +490,7 @@ div#last div#about .card {
   }
   div#last div#about {
     position: relative;
-    top: 15rem;
+    bottom: 90px;
   }
 }
 /*# sourceMappingURL=style.css.map */
