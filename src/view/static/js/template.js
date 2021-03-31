@@ -13,6 +13,7 @@ challenge = (number) => {
     if(number == 1) { getScreenDollarToReal() }
     else if(number == 2) { getScreenCalculator() }
     else if(number == 3) { getScreenMentalist() }
+    // else if(number == 4) { getScreenAluraflix() }
 }
 
 baseChallenge = (number) => {
@@ -113,7 +114,7 @@ getScreenMentalist = () => {
           </div>
           <div class="status">
             <label>Kick a value:</label>
-            <input class="form-control" type="number" v-model.number="valueKick" />
+            <input class="form-control" type="number" v-model.number="valueKick" v-on:keyup.enter="kick" />
             <button type="button" class="btn btn-outline-success" disabled v-on:click="kick"><i class="fas fa-check"></i></button>
             <p id="resultStatus" class="form-control">{{ resultStatus }}</p>
           </div>
@@ -131,4 +132,37 @@ getScreenMentalist = () => {
     mentalist()
 }
 
-challenge(3)
+getScreenAluraflix = () => {
+  // $('body').css("overflow-y", "auto")
+  // $('html').css("overflow-y", "auto")
+
+  document.getElementById('content').children[0].id = 'challengeAluraflix'
+
+  new Vue({
+    el: '#challengeAluraflix',
+    data: {
+      movieSearch: "",
+    },
+    methods: {
+      search() {
+        aluraflix(this.movieSearch)
+        this.movieSearch = ""
+      }
+    },
+    template: `
+        <div id="challengeAluraflix" class="container effect-parallax">
+          <div class="movieSearch">
+            <h1>AluraFlix</h1>
+            <label>Movie Search</label>
+            <input class="form-control" type="text" v-model="movieSearch" v-on:keyup.enter="search" />
+            <button type="button" class="btn btn-outline-light" v-on:click="search"><i class="fas fa-plus"></i></button>
+          </div>
+          <div class="movieList">
+          </div>
+        </div>        
+      `,
+  })
+}
+
+// challenge(4)
+// aluraflix('star')

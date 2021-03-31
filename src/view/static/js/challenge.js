@@ -128,3 +128,27 @@ mentalist = () => {
     },
   })
 }
+
+aluraflix = (movie) => {  
+  try {
+    const apiKey = "6cf8c264"
+    axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=' + apiKey + '&s=' + movie)
+      .then((response) => {
+        console.log(response.data.Search)
+        $.each(response.data.Search, (index, movie) => {
+          $('.movieList').prepend(`
+            <div class="movie">
+              <div class="box efect">
+                <img class="poster" src="${movie.Poster}" />
+                <span>${movie.Title}</span>
+              </div>
+            </div>
+          `)    
+        })
+      })
+      .catch((err) => {console.log(err)})
+
+  } catch (error) {
+    console.error(error);
+  }
+}
