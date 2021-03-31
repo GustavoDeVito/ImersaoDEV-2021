@@ -91,6 +91,7 @@ mentalist = () => {
           this.resultStatus = "Enter the correct values..."                   
         }
         else {
+          if(this.valueStart == "") { this.valueStart = 0 }
           this.resultStatus = "Ready..."
           $('.btn.btn-outline-success').prop('disabled', false)
           $('.btn.btn-outline-warning').prop('disabled', true)

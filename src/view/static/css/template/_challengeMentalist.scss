@@ -132,9 +132,68 @@ div#challengeMentalist {
 @media (max-width: 990px) {
 
     div#challengeMentalist {
-        div.game {            
-            margin-top: 20px;
+        &::before {
+            opacity: .8;
         }
+
+        div.game {            
+            margin-top: 0;
+            height: 0;
+
+            div.config {
+                margin-left: 20px;
+                margin-right: 10px;
+                margin-top: 0;
+
+                input {
+                    width: 100px;
+                }
+
+                button {
+                    color: #000;
+                    background-color: #ffc107;
+                }
+            }
+        }
+
+        div.status {
+
+            p, input, label {
+                margin-left: 20px;
+            }
+
+            p, input {
+                width: 305px;
+            }
+
+            button {
+                margin-right: 25px;
+                background-color: #198754;                
+                color: #fff;
+            }
+
+        }
+
+        div.score {
+
+            p {
+                margin-left: 30px;
+            }
+
+            :nth-child(1) {
+                margin-left: 50px;
+            }
+
+            :nth-child(2) {
+                margin-right: 60px;
+            }
+
+            :nth-child(4) {
+                margin-right: 45px;
+            }
+
+        }
+        
     }
     
 }

@@ -16,3 +16,4 @@
 - [ImersãoDEV2021](https://imersaodev2021.netlify.app)
 
 
+NOTA: Responsive 'MENTALIST'.

@@ -260,8 +260,47 @@ div#challengeMentalist div.score :nth-child(4) {
 }
 
 @media (max-width: 990px) {
+  div#challengeMentalist::before {
+    opacity: .8;
+  }
   div#challengeMentalist div.game {
-    margin-top: 20px;
+    margin-top: 0;
+    height: 0;
+  }
+  div#challengeMentalist div.game div.config {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 0;
+  }
+  div#challengeMentalist div.game div.config input {
+    width: 100px;
+  }
+  div#challengeMentalist div.game div.config button {
+    color: #000;
+    background-color: #ffc107;
+  }
+  div#challengeMentalist div.status p, div#challengeMentalist div.status input, div#challengeMentalist div.status label {
+    margin-left: 20px;
+  }
+  div#challengeMentalist div.status p, div#challengeMentalist div.status input {
+    width: 305px;
+  }
+  div#challengeMentalist div.status button {
+    margin-right: 25px;
+    background-color: #198754;
+    color: #fff;
+  }
+  div#challengeMentalist div.score p {
+    margin-left: 30px;
+  }
+  div#challengeMentalist div.score :nth-child(1) {
+    margin-left: 50px;
+  }
+  div#challengeMentalist div.score :nth-child(2) {
+    margin-right: 60px;
+  }
+  div#challengeMentalist div.score :nth-child(4) {
+    margin-right: 45px;
   }
 }
 
@@ -298,7 +337,7 @@ div#challengeMentalist div.score :nth-child(4) {
     background-color: #dc3545;
     color: #fff;
     right: 160px;
-    bottom: 30px;
+    bottom: 15px;
     width: 40px;
     height: 40px;
     padding-top: 8px;

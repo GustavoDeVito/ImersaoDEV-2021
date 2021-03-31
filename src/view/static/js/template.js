@@ -130,3 +130,5 @@ getScreenMentalist = () => {
 
     mentalist()
 }
+
+challenge(3)
