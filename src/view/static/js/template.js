@@ -23,6 +23,7 @@ baseChallenge = (number) => {
     window.scrollTo(0,0);
 
     $('body').css("overflow", "hidden")
+    $('html').css("overflow", "hidden")
 
     // $('body').prepend('<button type="button" id="buttonBack"><a href="index.html"><i class="fas fa-times"></i></a></button>')
     $('body').prepend('<a id="buttonBack" href="index.html"><i class="fas fa-times"></i></a>')
@@ -68,7 +69,7 @@ getScreenCalculator = () => {
   document.getElementById('content').children[0].id = 'challengeCalculator'
 
   $('#challengeCalculator').prepend(`
-    <div id="challengeCalculator" class="container effect-parallax">
+    <div class="container effect-parallax">
       <div class="calculator">
         <div class="display">{{ current || '0' }}</div>
         <div v-on:click="clear" class="btn">C</div>
@@ -100,19 +101,8 @@ getScreenCalculator = () => {
 getScreenMentalist = () => {
   document.getElementById('content').children[0].id = 'challengeMentalist'
 
-  new Vue({
-    el: '#challengeMentalist',
-    data: {
-      valueCorrect: 0,
-      valueStart: 0,
-      valueFinal: 0,
-      valueKick: 0,
-      resultStatus: "Waiting...",
-      resultHits: 0,
-      resultErrors: 0,
-    },
-    template: `
-      <div id="challengeMentalist" class="container effect-parallax">                
+  $('#challengeMentalist').prepend(`
+      <div class="container effect-parallax">                
         <div class="game">
           <h1>Mentalist</h1>
           <div class="config">
@@ -124,18 +114,19 @@ getScreenMentalist = () => {
           <div class="status">
             <label>Kick a value:</label>
             <input class="form-control" type="number" v-model.number="valueKick" />
-            <button type="button" class="btn btn-outline-success" v-on:click="config"><i class="fas fa-check"></i></button>
+            <button type="button" class="btn btn-outline-success" disabled v-on:click="kick"><i class="fas fa-check"></i></button>
             <p id="resultStatus" class="form-control">{{ resultStatus }}</p>
           </div>
           <div class="score">
             <label>Hits</label>
             <label>Errors</label>
             <br />
-            <p class="form-control">{{ resultHits }}</p>        
             <p class="form-control">{{ resultErrors }}</p>
+            <p class="form-control">{{ resultHits }}</p>
           </div>
         </div>
       </div>
-    `,
-    })
+    `)
+
+    mentalist()
 }

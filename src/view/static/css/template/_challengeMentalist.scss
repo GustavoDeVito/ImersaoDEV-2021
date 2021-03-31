@@ -2,7 +2,7 @@ div#challengeMentalist {
     &::before {
         content: '';
         position: absolute;
-        top: -1000px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -11,7 +11,7 @@ div#challengeMentalist {
         background-size: cover;
         background-position: center bottom;
         background-repeat: no-repeat;
-        opacity: .9;
+        opacity: .85;
         z-index: -999;
     }
 
@@ -130,9 +130,11 @@ div#challengeMentalist {
 }
 
 @media (max-width: 990px) {
+
     div#challengeMentalist {
-        div.game {
-            margin-top: 10px;
+        div.game {            
+            margin-top: 20px;
         }
     }
+    
 }

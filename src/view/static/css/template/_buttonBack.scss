@@ -16,7 +16,7 @@
 
     .fas.fa-times {
         font-size: 22px;
-        padding-left: 2px;
+        margin-left: 2px;
     }
 
     &:hover {
@@ -30,5 +30,14 @@
     #buttonBack {
         background-color: #dc3545;
         color: #fff;
+        right: 160px;
+        bottom: 30px;
+        width: 40px;
+        height: 40px;
+        padding-top: 8px;
+
+        .fas.fa-times {
+            margin-left: -4px;
+        }
     }
 }

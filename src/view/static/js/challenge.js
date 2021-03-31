@@ -69,3 +69,61 @@ calculator = () => {
         },
     })
 }
+
+mentalist = () => {
+  new Vue({
+    el: '#challengeMentalist',
+    data: {
+      valueCorrect: 0,
+      valueStart: "",
+      valueFinal: "",
+      valueKick: "",
+      valueAttempts: 3,
+      resultStatus: "Waiting...",
+      resultHits: 0,
+      resultErrors: 0,
+    },
+    methods: {
+      config() {
+        this.valueCorrect = parseInt(Math.random() * (this.valueFinal - this.valueStart) + this.valueStart)
+
+        if(this.valueStart >= this.valueFinal || this.valueStart < 0 || this.valueFinal < 0) {
+          this.resultStatus = "Enter the correct values..."                   
+        }
+        else {
+          this.resultStatus = "Ready..."
+          $('.btn.btn-outline-success').prop('disabled', false)
+          $('.btn.btn-outline-warning').prop('disabled', true)
+        }
+      },
+      kick() {
+        this.valueAttempts--
+        if(this.valueKick != this.valueCorrect) {
+          if(this.valueAttempts == 0) {
+            this.resultStatus = "Loser, number: " + this.valueCorrect
+            this.resultErrors++
+            this.reload()
+          }
+          else {
+            if(this.valueKick > this.valueCorrect) { this.resultStatus = "The number is less" }
+            else { this.resultStatus = "The number is higher" }
+          }
+        }
+        else {
+          this.resultStatus = "Winner, number: " + this.valueCorrect
+          this.resultHits++
+          this.reload()
+        }
+      },
+      reload() {
+        this.valueCorrect = 0
+        this.valueStart = "Start"
+        this.valueFinal = "Final"
+        this.valueKick = ""
+        this.valueAttempts = 3
+        $('.btn.btn-outline-warning').prop('disabled', false)
+        $('.btn.btn-outline-success').prop('disabled', true)
+      }
+    },
+  })
+}
