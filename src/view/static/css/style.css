@@ -418,7 +418,7 @@ div#challengeAluraflix div.swiper-container .swiper-slide {
   div.movieSearch button {
     background-color: #fff;
   }
-  div.movieSearch button .fas.fa-plus {
+  div.movieSearch button .fas.fa-search {
     color: #000;
   }
   div.swiper-container {

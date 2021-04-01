@@ -155,7 +155,7 @@ getScreenAluraflix = () => {
           <h1>AluraFlix</h1>
           <label>Movie Search</label>
           <input class="form-control" type="text" v-model="movieSearch" v-on:keyup.enter="search" />
-          <button type="button" class="btn btn-outline-light" v-on:click="search"><i class="fas fa-plus"></i></button>
+          <button type="button" class="btn btn-outline-light" v-on:click="search"><i class="fas fa-search"></i></button>
         </div>
         <div class="movieList">
         </div>
