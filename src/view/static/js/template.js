@@ -13,7 +13,7 @@ challenge = (number) => {
     if(number == 1) { getScreenDollarToReal() }
     else if(number == 2) { getScreenCalculator() }
     else if(number == 3) { getScreenMentalist() }
-    // else if(number == 4) { getScreenAluraflix() }
+    else if(number == 4) { getScreenAluraflix() }
 }
 
 baseChallenge = (number) => {
@@ -26,7 +26,6 @@ baseChallenge = (number) => {
     $('body').css("overflow", "hidden")
     $('html').css("overflow", "hidden")
 
-    // $('body').prepend('<button type="button" id="buttonBack"><a href="index.html"><i class="fas fa-times"></i></a></button>')
     $('body').prepend('<a id="buttonBack" href="index.html"><i class="fas fa-times"></i></a>')
     $('body').prepend('<div id="content"><div></div></div>')
     $('body').prepend(`
@@ -133,9 +132,6 @@ getScreenMentalist = () => {
 }
 
 getScreenAluraflix = () => {
-  // $('body').css("overflow-y", "auto")
-  // $('html').css("overflow-y", "auto")
-
   document.getElementById('content').children[0].id = 'challengeAluraflix'
 
   new Vue({
@@ -145,24 +141,25 @@ getScreenAluraflix = () => {
     },
     methods: {
       search() {
+        $('.swiper-container').remove();
+        $('.movieList').prepend(`<div class="swiper-container"><div class="swiper-wrapper"></div></div>`)
+
         aluraflix(this.movieSearch)
+
         this.movieSearch = ""
       }
     },
     template: `
-        <div id="challengeAluraflix" class="container effect-parallax">
-          <div class="movieSearch">
-            <h1>AluraFlix</h1>
-            <label>Movie Search</label>
-            <input class="form-control" type="text" v-model="movieSearch" v-on:keyup.enter="search" />
-            <button type="button" class="btn btn-outline-light" v-on:click="search"><i class="fas fa-plus"></i></button>
-          </div>
-          <div class="movieList">
-          </div>
-        </div>        
+      <div id="challengeAluraflix" class="container effect-parallax">
+        <div class="movieSearch">
+          <h1>AluraFlix</h1>
+          <label>Movie Search</label>
+          <input class="form-control" type="text" v-model="movieSearch" v-on:keyup.enter="search" />
+          <button type="button" class="btn btn-outline-light" v-on:click="search"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="movieList">
+        </div>
+      </div>
       `,
   })
 }
-
-// challenge(4)
-// aluraflix('star')
