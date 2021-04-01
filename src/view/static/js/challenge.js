@@ -132,7 +132,7 @@ mentalist = () => {
 aluraflix = (movie) => {
   try { 
     const apiKey = "6cf8c264"    
-    axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=' + apiKey + '&s=' + movie)
+    axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=' + apiKey + '&s=' + movie)
       .then((response) => {
         console.log(response.data.Search)
         $.each(response.data.Search, (index, movie) => {
@@ -161,4 +161,3 @@ aluraflix = (movie) => {
     console.error(error);
   }
 }
-

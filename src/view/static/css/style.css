@@ -401,8 +401,8 @@ div#challengeAluraflix div.swiper-container {
 
 div#challengeAluraflix div.swiper-container .swiper-slide {
   background-position: center;
-  background-size: 300px 300px;
-  width: 300px;
+  background-size: 250px 300px;
+  width: 250px;
   height: 300px;
 }
 
@@ -414,6 +414,12 @@ div#challengeAluraflix div.swiper-container .swiper-slide {
   div.movieSearch h1 {
     margin-bottom: 10px !important;
     font-size: 33px !important;
+  }
+  div.movieSearch button {
+    background-color: #fff;
+  }
+  div.movieSearch button .fas.fa-plus {
+    color: #000;
   }
   div.swiper-container {
     padding-top: 30px !important;
