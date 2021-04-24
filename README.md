@@ -10,7 +10,6 @@
 - Vue.js
 - Font Awesome
 - Jquery
-- JavaScript
 - Axios
 - Swiper
 
