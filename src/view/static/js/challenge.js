@@ -130,11 +130,12 @@ mentalist = () => {
 }
 
 aluraflix = (movie) => {
-  try { 
-    const apiKey = "6cf8c264"    
-    axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=' + apiKey + '&s=' + movie)
+  try {
+    const apiKey = "6cf8c264"
+    // const apiKey = "dfc2e044"
+    axios.get('https://www.omdbapi.com/?s=' + movie + '&apikey=' + apiKey)
       .then((response) => {
-        console.log(response.data.Search)
+        // console.log(response.data.Search)
         $.each(response.data.Search, (index, movie) => {
           $('.swiper-wrapper').prepend(`
             <div class="swiper-slide" style="background-image: url(${movie.Poster});"></div>
