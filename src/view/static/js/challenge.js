@@ -130,35 +130,30 @@ mentalist = () => {
 }
 
 aluraflix = (movie) => {
-  try {
-    const apiKey = "6cf8c264"
-    // const apiKey = "dfc2e044"
-    axios.get('https://www.omdbapi.com/?s=' + movie + '&apikey=' + apiKey)
-      .then((response) => {
-        // console.log(response.data.Search)
-        $.each(response.data.Search, (index, movie) => {
-          $('.swiper-wrapper').prepend(`
-            <div class="swiper-slide" style="background-image: url(${movie.Poster});"></div>
-          `)
-          if(index == response.data.Search.length - 1) {
-            new Swiper('.swiper-container', {
-              effect: 'coverflow',
-              grabCursor: true,
-              centeredSlides: true,
-              slidesPerView: 'auto',
-              overflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }
-            });
-          }
-        })
-      })
-      .catch((err) => {console.log(err)})
-  } catch (error) {
-    console.error(error);
-  }
+  const apiKey = "6cf8c264"
+  // const apiKey = "dfc2e044"
+  axios.get('https://www.omdbapi.com/?s=' + movie + '&apikey=' + apiKey)
+    .then((response) => {
+      $.each(response.data.Search, (index, movie) => {
+        $('.swiper-wrapper').prepend(`
+          <div class="swiper-slide" style="background-image: url(${movie.Poster});"></div>
+        `)
+      if(index == response.data.Search.length - 1) {
+        new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          overflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }
+        });
+      }
+    })
+  })
+  .catch((err) => {console.log(err)})
 }
