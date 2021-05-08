@@ -1,2 +1,0 @@
-[build]
-    environment = { API_KEY_IMDB = "6cf8c264" }

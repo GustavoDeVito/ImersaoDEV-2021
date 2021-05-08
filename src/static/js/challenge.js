@@ -130,9 +130,6 @@ mentalist = () => {
 }
 
 aluraflix = (movie) => {
-  const apiKey = API_KEY_IMDB
-  // const apiKey = "6cf8c264"
-  // const apiKey = "dfc2e044"
   axios.get('https://www.omdbapi.com/?s=' + movie + '&apikey=' + apiKey)
     .then((response) => {
       console.log(response.data);
